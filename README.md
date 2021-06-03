@@ -1,6 +1,6 @@
 # SolarCalculator  ☀️
 
-# Description:
+## Description:
 Our app provides a calculator to determine applicability of solar power to an address based on latitude, longitude, KWH usage per day and DNI irradiance calculations.  
 
 ## User Story
@@ -15,5 +15,13 @@ Do you have tree coverage, how old is your roof?  then if its a good score refer
 
 Provide a state wide calculation could eventually also provide quotes.   General information on solar
 
-### Deployed App
+## Screenshot
+
+
+## Deployed App
+
+
+## Github Repo:
+
+https://github.com/Kassandra14/solar-calc
 
