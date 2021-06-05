@@ -1,15 +1,16 @@
-import axios from "axios";
+  
+import axios from 'axios';
 
-// Export an object containing methods we'll use for accessing the Dog.Ceo API
+// Export an object containing methods we'll use for accessing the weather geocoding and NREL irradiance APIs:
 
 export default {
-  getRandomDog: function() {
-    return axios.get("https://dog.ceo/api/breeds/image/random");
+  getLatLong: function (city) {
+    return axios.get (
+      'http://api.openweathermap.org/geo/1.0/direct?q=' + city + ', CO, 840&limit=1&appid=cfd2430c3ee19405f5b8a3b9dd3ab7f3'
+    );
   },
-  getDogsOfBreed: function(breed) {
-    return axios.get("https://developer.nrel.gov/api/solar/solar_resource/v1.json?limit=1&api_key=J89k3CiSfltbxqmSjIxUXCzbciQLAh1ZQUQhEGhT&lat=40.0771698&lon=-105.1841239");
-  },
-  getBaseBreedsList: function() {
-    return axios.get("https://dog.ceo/api/breeds/list");
+  getIrradiance: function (lat, long) {
+
+    return axios.get ('https://developer.nrel.gov/api/solar/solar_resource/v1.json?limit=1&api_key=J89k3CiSfltbxqmSjIxUXCzbciQLAh1ZQUQhEGhT&lat=' + lat + '&lon=' + long );
   }
 };
